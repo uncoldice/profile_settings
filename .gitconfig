@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = 
+#	email = wentao@pb.(none)
+[user]
+	name = Wentao Chen
+	email = wentao.chen@aptiv.com
+[core]
+	editor = vi
+	filemode = false
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+[color]
+	ui = auto
+[http]
+	cookiefile = $HOME/.gitcookies
