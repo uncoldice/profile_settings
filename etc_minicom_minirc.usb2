@@ -1,0 +1,5 @@
+pu port             /dev/ttyUSB2 
+pu baudrate         115200 
+pu rtscts           No  
+pu xonxoff          Yes
+

@@ -1,0 +1,27 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda1 during installation
+UUID=6832bbb9-55b1-4c77-9993-d543495b4a20 /               ext4    errors=remount-ro 0       1
+/dev/sda5 none            swap    sw              0       0
+###UUID=c9f9a9f6-d022-45b0-95b8-bb64f02cd4e9 none            swap    sw              0       0
+/dev/sdb1        /home  auto    rw,suid,dev,exec,auto,nouser,async 0       0
+#
+# /var/lib/jenkins contains Jenkins configuration
+# /var/log/jenkins contains Jenkins logs
+#
+#/dev/sdc1       /var/lib/jenkins        auto    rw,suid,dev,exec,auto,nouser,async      0       0
+#/dev/sdc2       /var/log/jenkins        auto    rw,suid,dev,exec,auto,nouser,async      0       0
+#/dev/fd0        /media/floppy0  auto    rw,user,noauto,exec,utf8 0       0
+#
+# Command to mount the shared folders:
+#    sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other
+# To make mounting of shared folders persistent, uncomment the following line:
+###.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other 0 0
+
+#sudo mount -t cifs //10.239.124.56/djzkzc $HOME/remote -o username='djzkzc',password='aptiv'
+//10.239.124.56/djzkzc/work /home/user/remote cifs username=djzkzc,password=aptiv,uid=djzkzc,gid=user,rw
