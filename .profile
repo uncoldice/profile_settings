@@ -35,7 +35,7 @@ fi
 
 alias get_sem_flash='scp -r djzkzc@10.239.124.56:/home/djzkzc/work/sem/out/target/product/gtt_abl_car/gtt_hydra-flashfiles-eng.djzkzc.zip ./'
 alias get_ihu_flash='scp -r djzkzc@10.239.124.56:/home/djzkzc/work/ihu/out/target/product/ihu_abl_car/ihu_kraken-flashfiles-eng.djzkzc.zip ./'
-alias bs='ssh -Y 10.239.124.56'
+alias bs='ssh -Y djzkzc@10.239.124.56'
 alias apt-get='sudo apt-get'
 alias go_ihu='cd $HOME/remote/ihu/out/target/product/ihu_abl_car'
 alias r1='tmux attach -t remote_1'
