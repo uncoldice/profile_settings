@@ -42,6 +42,7 @@ alias r1='tmux attach -t remote_1'
 alias r2='tmux attach -t remote_2'
 alias chrome='chromium-browser'
 alias diff='meld'
+unalias ccat
 alias cat='ccat'
 
 #sudo mount -t cifs //10.239.124.56/djzkzc $HOME/remote -o username='djzkzc',password='aptiv',uid='djzkzc',gid='user'
