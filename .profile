@@ -36,6 +36,7 @@ fi
 alias get_sem_flash='scp -r djzkzc@10.239.124.56:/home/djzkzc/work/sem/out/target/product/gtt_abl_car/gtt_hydra-flashfiles-eng.djzkzc.zip ./'
 alias get_ihu_flash='scp -r djzkzc@10.239.124.56:/home/djzkzc/work/ihu/out/target/product/ihu_abl_car/ihu_kraken-flashfiles-eng.djzkzc.zip ./'
 alias bs='ssh -Y djzkzc@10.239.124.56'
+alias b='ssh -Y djzkzc@10.239.126.30'
 alias apt-get='sudo apt-get'
 alias go_ihu='cd $HOME/remote/ihu/out/target/product/ihu_abl_car'
 alias r1='tmux attach -t remote_1'
@@ -44,6 +45,7 @@ alias chrome='chromium-browser'
 alias diff='meld'
 #alias cat='ccat'
 alias du='ncdu'
+alias httpserver='python -m SimpleHTTPServer 8010'
 
 #sudo mount -t cifs //10.239.124.56/djzkzc $HOME/remote -o username='djzkzc',password='aptiv',uid='djzkzc',gid='user'
 
@@ -69,3 +71,4 @@ CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
 PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 export JAVA_HOME JRE_HOME PATH CLASSPATH
 #sudo docker run -d -e REINDEX=30 -v /home/user/work/ihu:/src -p 8080:8080 -p 2222:22 opengrok/docker:latest
+#sudo mount -t davfs http://10.239.126.30/home/djzkzc $HOME/fast_remote -o uid=wentao,gid=wentao,rw
